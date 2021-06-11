@@ -10,7 +10,7 @@ unsigned long long factorial(unsigned int a){
     else if (a>1){
       return (a*factorial(a-1));
     }
-  }
+ }
 
 int main (void){
   int counter;
