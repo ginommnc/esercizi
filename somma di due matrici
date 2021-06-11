@@ -23,8 +23,8 @@ int main (void){
       printf("%d\t",somma[row][col]);
 
 
-    }
+      }
 
 puts("\n");
-}
+    }
 }
