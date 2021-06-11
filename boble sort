@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#define SIZE 9
+
+int main (void){
+  int b[SIZE];
+  puts("inserisci 10 valori: \n\n");
+  for(int i=0; i<=SIZE;++i){
+    
+    int a;
+    scanf("%d",&a);
+    b[i]=a;
+  }
+    int k;
+
+    for (int c=0;c<=SIZE;c++){
+     for (int i=0;i<=SIZE;i++){
+       if (b[i]>b[i+1]){
+          k=b[i];
+          b[i]=b[i+1];
+          b[i+1]=k;
+       }
+       
+
+     }
+     }
+
+    int i;
+     puts("\n");
+     for (i=0;i<=9;i++){
+       printf("%d\n",b[i]);
+     }
+ 
+ 
+  }
