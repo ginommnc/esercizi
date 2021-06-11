@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define N 10 //riga matrice1
+#define K 3 //colonna matrice1, riga matrice 2
+#define M 2 //colonna matrice2
+
+int main(){
+  int a[N][K]; 
+  int b[K][M];
+  int c[N][M];
+  size_t row,col,inner;
+
+ 
+  srand (time(0));
+  for(row=0; row<N; ++row){
+    for(inner=0; inner<K;inner++){
+      a[row][inner]=rand();
+  }
+  }
+  for(row=0; row<N; ++row){
+    for(col=0;col<M;++col){
+      c[row][col]=0;
+      for( inner=0;inner<K;++inner)
+      c[row][col]+=a[row][inner]*b[inner][col];
+    }
+  } 
+    puts ("A= \n");
+    for (row=0;row<N;++row){
+      for(inner=0;inner<K; ++inner){
+        
+        printf("%6d\t\t",a[row][inner]);
+        
+      }
+      printf("\n"); 
+    }
+    puts("\n");
+    puts("B=\n");
+    for(inner=0;inner<K;++inner){
+      for(col=0;col<M;++col){
+        printf("%6d\t\t",b[inner][col]);
+      }
+      puts("\n");
+    }
+    puts("\n");
+    puts("C=A*B=\n");
+    for(row=0;row<N;++row){
+      for(col=0;col<M;++col){
+        printf("%6d\t\t", c[row][col]);
+      }
+      puts("\n");
+    }
+    }
+    
+    
