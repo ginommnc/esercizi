@@ -16,14 +16,14 @@ int main(){
   }
   for(col=0; col<SIZE2; ++col){
     b[col]=rand();
-    }
-for (row=0;row<SIZE1;++row){
-  for(col=0;col<SIZE2; ++col){
-    c[row][col]=a[row]*b[col];
-    printf("%6d\t\t",c[row][col]);
   }
+  for (row=0;row<SIZE1;++row){
+    for(col=0;col<SIZE2; ++col){
+      c[row][col]=a[row]*b[col];
+      printf("%6d\t\t",c[row][col]);
+      }
   puts("\n");
-  }
+    }
   
   }
 
