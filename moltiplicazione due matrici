@@ -16,40 +16,49 @@ int main(){
   for(row=0; row<N; ++row){
     for(inner=0; inner<K;inner++){
       a[row][inner]=rand();
+    }
   }
+  srand (time(0));
+  for(row=0; row<K; row++){
+    for(inner=0; inner<M; inner++){
+      b[row][inner]=rand();
+    }
   }
+
+
   for(row=0; row<N; ++row){
     for(col=0;col<M;++col){
       c[row][col]=0;
-      for( inner=0;inner<K;++inner)
-      c[row][col]+=a[row][inner]*b[inner][col];
-    }
-  } 
-    puts ("A= \n");
-    for (row=0;row<N;++row){
-      for(inner=0;inner<K; ++inner){
-        
-        printf("%6d\t\t",a[row][inner]);
-        
+      for( inner=0;inner<K;++inner){
+        c[row][col]+=a[row][inner]*b[inner][col];
       }
-      printf("\n"); 
-    }
-    puts("\n");
-    puts("B=\n");
-    for(inner=0;inner<K;++inner){
-      for(col=0;col<M;++col){
-        printf("%6d\t\t",b[inner][col]);
-      }
-      puts("\n");
-    }
-    puts("\n");
-    puts("C=A*B=\n");
-    for(row=0;row<N;++row){
-      for(col=0;col<M;++col){
-        printf("%6d\t\t", c[row][col]);
-      }
-      puts("\n");
-    }
-    }
+    } 
+  }
     
+  puts ("A= \n");
+  for (row=0;row<N;++row){
+    for(inner=0;inner<K; ++inner){
+        
+      printf("%6d\t\t",a[row][inner]);
+        
+    }
+      printf("\n"); 
+  }
+      puts("\n");
+      puts("B=\n");
+      for(inner=0;inner<K;++inner){
+        for(col=0;col<M;++col){
+          printf("%6d\t\t",b[inner][col]);
+        }
+          puts("\n");
+      }
+          puts("\n");
+          puts("C=A*B=\n");
+          for(row=0;row<N;++row){
+            for(col=0;col<M;++col){
+              printf("%6d\t\t", c[row][col]);
+            }     
+              puts("\n");
+          }
+}
     
